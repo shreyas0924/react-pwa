@@ -11,15 +11,13 @@ const ChatSection = () => {
           `http://3.111.128.67/assignment/chat?page=0`
         )
         const data = await response.json()
+        
         setChats(data.chats)
       } catch (error) {
         console.log('Error fetching data:', error)
       }
     }
-
     fetchData()
-
-   
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
