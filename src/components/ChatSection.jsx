@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react'
 
 const ChatSection = () => {
   const [chats, setChats] = useState([])
-
+  const number = 0
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://3.111.128.67/assignment/chat?page=0`
+          `https://3.111.128.67/assignment/chat?page=${number}`
         )
         const data = await response.json()
 
