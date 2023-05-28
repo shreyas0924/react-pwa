@@ -19,7 +19,7 @@ const ChatSection = () => {
 
     fetchData()
 
-    console.log(chats)
+   
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
