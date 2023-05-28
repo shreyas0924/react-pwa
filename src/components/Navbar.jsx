@@ -1,7 +1,13 @@
 import React from 'react'
 import '../App.css'
 
+const formatDate = (date) => {
+  const options = { day: 'numeric', month: 'short', year: 'numeric' }
+  return new Date(date).toLocaleString('en-US', options)
+}
+
 const Navbar = () => {
+  const currentDate = new Date()
   return (
     <div>
       <div className='flex m-6 '>
@@ -64,6 +70,10 @@ const Navbar = () => {
           <img src='./dots-vertical.png' alt='dots' />
         </div>
       </div>
+
+      <div className='bg-gray-700 h-line-left'></div>
+      <div className='date'>{formatDate(currentDate)}</div>
+      <div className='bg-gray-700 h-line-right'></div>
     </div>
   )
 }

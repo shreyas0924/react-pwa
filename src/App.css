@@ -1,22 +1,35 @@
 body {
   background-color: #faf9f4;
 }
+.h-line-right {
+  position: absolute;
+  width: 7.25rem;
+  height: 0px;
+  left: 16px;
+  top: 200px;
+  border: 1px solid #b7b7b7;
+}
+.h-line-left {
+  position: absolute;
+  width: 7.25rem;
+  height: 0px;
+  left: 243px;
+  top: 200px;
+  border: 1px solid #b7b7b7;
+}
 
-.header-font {
-  width: 215px;
-  height: 46px;
-
+.date {
+  position: absolute;
+  width: 87px;
+  height: 18px;
+  left: 144px;
+  top: 192px;
   font-family: 'Mulish';
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
 
-  color: #606060;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  color: #b7b7b7;
 }
