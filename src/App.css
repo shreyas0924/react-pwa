@@ -73,3 +73,7 @@ body {
   order: 0;
   flex-grow: 1;
 }
+
+.border-style {
+  border-radius: 0px 12px 12px 12px;
+}
