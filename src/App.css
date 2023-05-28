@@ -33,3 +33,43 @@ body {
 
   color: #b7b7b7;
 }
+
+.container {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 12px;
+  gap: 16px;
+  margin-left: 1rem;
+  width: 90%;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 247px;
+  height: 18px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
