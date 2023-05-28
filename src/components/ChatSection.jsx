@@ -7,7 +7,9 @@ const ChatSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(process.env.REACT_APP_API_URL)
+        const response = await fetch(
+          `http://3.111.128.67/assignment/chat?page=0`
+        )
         const data = await response.json()
         setChats(data.chats)
       } catch (error) {
