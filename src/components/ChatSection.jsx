@@ -10,7 +10,7 @@ const ChatSection = () => {
 
     try {
       const response = await fetch(
-        `//3.111.128.67/assignment/chat?page=${number}`
+        `https://3.111.128.67/assignment/chat?page=${number}`
       )
       const data = await response.json()
       setChats((prevChats) => [...prevChats, ...data.chats])
@@ -32,8 +32,15 @@ const ChatSection = () => {
       }
     }
     fetchData()
+    window.addEventListener('scroll', handleScroll)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const handleScroll = () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      loadMoreData()
+    }
+  }
 
   return (
     <div>
@@ -56,12 +63,6 @@ const ChatSection = () => {
             </div>
           </div>
         ))}
-        <button
-          onClick={loadMoreData}
-          className=' flex bg-gray-200 p-2 text-center rounded-2xl ml-auto mr-auto'
-        >
-          Load More
-        </button>
       </Suspense>
     </div>
   )
