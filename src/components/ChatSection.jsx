@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from 'react'
 
-const url = process.env.REACT_APP_API_URL
-
 const ChatSection = () => {
   const [chats, setChats] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
+      const url = process.env.REACT_APP_API_URL
       try {
         const response = await fetch(url)
         const data = await response.json()
