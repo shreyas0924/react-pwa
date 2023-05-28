@@ -8,10 +8,16 @@ const ChatSection = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://3.111.128.67/assignment/chat?page=0`
+          `http://3.111.128.67/assignment/chat?page=0`,
+          {
+            headers: {
+              'Accept': 'application/json',
+          //     'Path': '/',
+            },
+          }
         )
         const data = await response.json()
-        
+
         setChats(data.chats)
       } catch (error) {
         console.log('Error fetching data:', error)
