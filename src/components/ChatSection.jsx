@@ -10,7 +10,7 @@ const ChatSection = () => {
 
     try {
       const response = await fetch(
-        `https://3.111.128.67/assignment/chat?page=${number}`
+        `http://3.111.128.67/assignment/chat?page=${number}`
       )
       const data = await response.json()
       setChats((prevChats) => [...prevChats, ...data.chats])
